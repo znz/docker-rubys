@@ -20,7 +20,7 @@ RUN bash -c 'set -euo pipefail; \
  1.8.7-p374 \
  1.9.3-p484 \
  2.0.0-p353 \
- 2.1.0-preview2 \
+ 2.1.0-rc1 \
  ; do \
  echo install $v; \
  rbenv install $v; \
