@@ -2,7 +2,7 @@ FROM ubuntu:12.04
 MAINTAINER Kazuhiro NISHIYAMA <zn@mbf.nifty.com>
 
 # build depends
-RUN apt-get install -y git-core wget build-essential autoconf libssl-dev libyaml-dev libreadline6 libreadline6-dev zlib1g zlib1g-dev
+RUN apt-get install -y git-core wget build-essential autoconf libssl-dev libyaml-dev libreadline6 libreadline6-dev zlib1g zlib1g-dev subversion bison
 # utils
 RUN apt-get install -y bash-completion vim
 # rbenv and ruby-build
@@ -17,10 +17,10 @@ RUN bash -c 'set -euo pipefail; \
  rbenv plug each; \
  export CONFIGURE_OPTS="--disable-install-rdoc --disable-install-doc"; \
  for v in \
- 1.8.7-p374 \
+ 1.8.7-p375 \
  1.9.3-p484 \
  2.0.0-p353 \
- 2.1.0-rc1 \
+ 2.1.0 \
  ; do \
  echo install $v; \
  rbenv install $v; \
